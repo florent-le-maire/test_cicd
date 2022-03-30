@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+          uses: actions/checkout@v2
+
+      - name: deploy file to server
+          uses: wlixcc/SFTP-Deploy-Action@v1.0
+          with:
+            username: 'floreod'
+            server: '${{ secrets.SERVER_IP }}'
+            local_path: './build/*'
+            remote_path: '/www'
+            ARGS: "-o ConnectTimeout=5"

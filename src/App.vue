@@ -20,10 +20,10 @@ body,
   height: 100%;
 }
 body {
-  background: -webkit-linear-gradient(aquamarine, blue);
-  background: -o-linear-gradient(aquamarine, blue);
-  background: -moz-linear-gradient(aquamarine, blue);
-  background: linear-gradient(aquamarine, blue);
+  background: -webkit-linear-gradient(#3871ec, blue);
+  background: -o-linear-gradient(#3871ec, blue);
+  background: -moz-linear-gradient(#3871ec, blue);
+  background: linear-gradient(#3871ec, blue);
 }
 
 #app {
